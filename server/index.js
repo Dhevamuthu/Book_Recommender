@@ -172,6 +172,7 @@ app.get("/books", async (req, res) => {
   try {
       const books = await Books.find();
       res.json(books);
+      console.log("Fetcjed");
   } catch (error) {
       console.error("Error fetching books:", error);
       res.status(500).json({ error: "Error fetching books" });
@@ -311,6 +312,6 @@ app.get('/fiction', async (req, res) => {
 
 //   })
 
-  app.listen(4000,()=>{
+  app.listen(4001,()=>{
     console.log("App Started")
   })
